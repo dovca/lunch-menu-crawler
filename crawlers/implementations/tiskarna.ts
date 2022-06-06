@@ -1,6 +1,6 @@
 import cheerio from 'cheerio';
 import {parse, startOfWeek} from 'date-fns';
-import {cs} from 'date-fns/locale';
+import {cs} from 'date-fns/esm/locale';
 import {ICrawler} from '~/types/crawlers';
 import {Course, DailyMenu, Dish} from '~/types/menu';
 import {capitalize} from 'lodash-es';

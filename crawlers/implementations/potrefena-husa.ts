@@ -2,7 +2,7 @@ import cheerio from 'cheerio';
 import {Dish} from '~/types/menu';
 import {ICrawler} from '~/types/crawlers';
 import {parse} from 'date-fns';
-import {cs} from 'date-fns/locale';
+import {cs} from 'date-fns/esm/locale';
 import {extractDishFeatures} from '~/helpers';
 
 const PotrefenaHusa: ICrawler = {

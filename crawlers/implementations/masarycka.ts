@@ -1,7 +1,7 @@
 import {ICrawler, ICrawlerResult} from '~/types/crawlers';
 import {Course, DailyMenu, Dish} from '~/types/menu';
 import {deburr} from 'lodash-es';
-import {cs} from 'date-fns/locale';
+import {cs} from 'date-fns/esm/locale';
 import {parse, startOfWeek} from 'date-fns';
 import {extractDishFeatures} from '~/helpers';
 
