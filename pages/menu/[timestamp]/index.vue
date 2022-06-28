@@ -25,7 +25,7 @@
 
 	const {data: menusData} = useFetch(() => `/api/menus/${timestamp}`, {retry: false});
 	const {data: restaurantsData} = useFetch(() => '/api/restaurants', {retry: false});
-	const combinedDishes = computed(() => menusData.value.menus
+	const combinedDishes = computed(() => menusData.value?.menus
 		? Object
 			.keys(menusData.value.menus)
 			.reduce((acc, key) => [
