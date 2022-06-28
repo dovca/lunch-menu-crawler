@@ -15,7 +15,14 @@ export default class CrawlerService {
 	}
 
 	async crawlAll() {
-		await Promise.all(Object.keys(crawlers).map((id) => this.crawlOne(id)));
+		await Promise.all(Object.keys(crawlers).map(async (id) => {
+			try {
+				return await this.crawlOne(id);
+			} catch (e: any) {
+				console.error(e);
+				return null;
+			}
+		}));
 	}
 
 	async crawlOne(id: string) {
